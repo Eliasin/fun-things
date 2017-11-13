@@ -52,9 +52,7 @@ passing_math = list(filter((lambda x: (x / 50 * 100) > 50), math_marks))
 def average_mark(marks):
   return reduce(
     (lambda x, y: x + y), 
-    list(
       map((lambda x: x / 50 * 100), marks)
-      )
     )
 
 print("So the passing grades are {} and {}".format(passing_english, passing_math))
@@ -62,5 +60,5 @@ print("So the passing grades are {} and {}".format(passing_english, passing_math
 passing_math_average = average_mark(passing_math) / len(passing_math)
 passing_english_average = average_mark(passing_english) / len(passing_english)
 
-print("And the passing averages are {:.2f} and {:.2f}.".format(passing_math_average, passing_english_average))
+print("And the passing averages are {:.2f}% and {:.2f}%.".format(passing_math_average, passing_english_average))
 print("I guess thats a bit better.")
