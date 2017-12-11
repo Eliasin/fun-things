@@ -2,16 +2,16 @@ class UnfortunateAdventurer:
   def __init__(self, name: str) -> None:
     self.name = name
   
-  def smack(damage: int) -> None:
+  def smack(self, damage: int) -> None:
     print("Ow ({})".format(damage))
     
-  def slow(amount: int) -> None:
+  def slow(self, amount: int) -> None:
     print("Oh noes, I am the slows ({})".format(amount))
     
-  def cripple() -> None:
+  def cripple(self) -> None:
     print("Oh no, I am now robbed of the use of my legs!")
     
-  def magic_smack(magicalness: int) -> None:
+  def magic_smack(self, magicalness: int) -> None:
     print("This is too magical for me, my mind cannot handle the {} magical units of magicalness!".format(magicalness))
     
 larry = UnfortunateAdventurer("Larry")
