@@ -84,7 +84,7 @@ class Wand(MagicalItem):
     return self.callout.format(self.name, self.magicalness)
     
 class Staff(MagicalItem):
-  def action_callout(self) -> str:
+  def use(self) -> str:
     target.cripple()
     target.magic_smack(self.magicalness)
     return self.callout.format(self.name, self.magicalness)
