@@ -37,6 +37,7 @@ class Bow:
   def __init__(self, name: str, damage: int, callout: str) -> None:
     self.name = name
     self.damage = damage
+    self.callout = callout
   
   def get_name(self) -> str:
     return self.name
