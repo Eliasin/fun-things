@@ -31,7 +31,7 @@ class Sword:
     
   def use(self, target) -> str:
     target.smack(self.damage)
-    return callout.format(self.damage)
+    return self.callout.format(self.damage)
 
 class Bow:
   def __init__(self, name: str, damage: int, callout: str) -> None:
@@ -47,7 +47,7 @@ class Bow:
   def use(self, target) -> str:
     target.smack(self.damage)
     target.slow(self.damage // 2)
-    return callout.format(self.damage)
+    return self.callout.format(self.damage)
 
 longsword = Sword("Longsword", 8, "I'm a swooooord! Take {} damage!")
 
@@ -74,19 +74,19 @@ class MagicalItem:
     return self.magicalness
   
   def use(self, target) -> str:
-    return callout.format(self.name, self.magicalness)
+    return self.callout.format(self.name, self.magicalness)
     
 
 class Wand(MagicalItem):
   def use(self, target) -> str:
     target.magic_smack(self.magicalness)      
-    return callout.format(self.name, self.magicalness)
+    return self.callout.format(self.name, self.magicalness)
     
 class Staff(MagicalItem):
   def action_callout(self) -> str:
     target.cripple()
     target.magic_smack(self.magicalness)
-    return callout.format(self.name, self.magicalness)
+    return self.callout.format(self.name, self.magicalness)
     
 
 magic_mirror = MagicalItem("Magic Mirror", 10, "Im soooooooooooo magical look at me! I'm a {} that is {} magical units of magical if you care about the details.")
