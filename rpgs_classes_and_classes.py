@@ -54,7 +54,7 @@ longsword = Sword("Longsword", 8, "I'm a swooooord! Take {} damage!")
 
 print(longsword.use(larry))
 
-shortbow = Bow("Shortbow", 6, "I'm a booow! Take {} damage and be slooowed by {}!")
+shortbow = Bow("Shortbow", 6, "I'm a booow! Take {} damage!")
 
 print(shortbow.use(larry))
 
